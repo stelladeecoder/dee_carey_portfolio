@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dee Carey – Data Professional</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/header.png" alt="Abstract data and automation banner" class="hero-image">
+    <div class="intro">
+      <h1>Dee Carey</h1>
+      <p class="tagline">Data Professional: analytics & automation for smarter business and creative decisions</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <p>As a data professional, I use <strong>analytics</strong> and <strong>automation</strong> to drive smarter business and creative decisions. My work blends technical depth with a focus on storytelling so that stakeholders can act on insights confidently.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Core Skills</h2>
+      <ul>
+        <li><strong>Data analysis & visualization:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook</li>
+        <li><strong>Machine learning:</strong> scikit‑learn, Gradient Boosting, Random Forests, decision trees, Naive Bayes</li>
+        <li><strong>Data engineering:</strong> data preprocessing, feature engineering, handling imbalanced datasets, SQL</li>
+        <li><strong>Project workflow:</strong> exploratory data analysis, model evaluation (precision, recall, F1‑score, ROC‑AUC), benchmarking</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Selected Projects</h2>
+
+      <!-- Project Card 1 -->
+      <article class="project-card">
+        <div class="card-header">
+          <h3>Credit‑Card‑Fraud‑Detection‑GBM</h3>
+          <button class="toggle" onclick="toggleDetails(event)">Show Details</button>
+        </div>
+        <p class="short-description">Detecting fraudulent credit card transactions using a Gradient Boosting Machine (GBM).</p>
+        <div class="details">
+          <ul>
+            <li>Built a full data pipeline: acquired the Kaggle “Credit Card Fraud Detection 2023” dataset, scaled features, dropped uninformative columns and performed stratified train‑test split.</li>
+            <li>Trained a <code>GradientBoostingClassifier</code> and evaluated using precision, recall, F1‑score and ROC‑AUC (ROC‑AUC ≈ 0.9999 and perfect precision/recall).</li>
+            <li>Benchmarked against a Kaggle Random Forest model and created ROC and Precision‑Recall curve visualizations.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, Pandas, NumPy, scikit‑learn, Matplotlib, Seaborn, Kaggle Kernels</p>
+          <a href="https://github.com/stelladeecoder/credit-card-fraud-detection-gbm" target="_blank" class="repo-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project Card 2 -->
+      <article class="project-card">
+        <div class="card-header">
+          <h3>CharityML – Finding Donors</h3>
+          <button class="toggle" onclick="toggleDetails(event)">Show Details</button>
+        </div>
+        <p class="short-description">Supervised learning project to optimize donor targeting for a fictitious charity.</p>
+        <div class="details">
+          <ul>
+            <li>Analyzed a census‑like dataset with demographic and income attributes.</li>
+            <li>Evaluated multiple algorithms (Naive Bayes, decision trees, logistic regression, ensemble methods) to maximize donation yield and minimize mailings.</li>
+            <li>Engineered features, performed cross‑validation and documented the workflow in a Jupyter notebook.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, NumPy, Pandas, Matplotlib, scikit‑learn</p>
+          <a href="https://github.com/stelladeecoder/CharityML" target="_blank" class="repo-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project Card 3 -->
+      <article class="project-card">
+        <div class="card-header">
+          <h3>Analyzing TV Data – Super Bowl</h3>
+          <button class="toggle" onclick="toggleDetails(event)">Show Details</button>
+        </div>
+        <p class="short-description">Exploratory analysis of Super Bowl outcomes, viewership, and halftime shows.</p>
+        <div class="details">
+          <ul>
+            <li>Scraped and cleaned Super Bowl game, television and halftime‑musician data.</li>
+            <li>Explored extreme game outcomes, viewership trends, TV ratings and advertising costs.</li>
+            <li>Identified prolific halftime performers and visualized trends over time.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, NumPy, Pandas, Matplotlib</p>
+          <a href="https://github.com/stelladeecoder/Analyzing-TV-Data" target="_blank" class="repo-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project Card 4 -->
+      <article class="project-card">
+        <div class="card-header">
+          <h3>Analyze International Debt Statistics</h3>
+          <button class="toggle" onclick="toggleDetails(event)">Show Details</button>
+        </div>
+        <p class="short-description">Notebook exploring World Bank debt owed by developing countries.</p>
+        <div class="details">
+          <ul>
+            <li>Summarized debt by country and identified nations with the highest liabilities.</li>
+            <li>Computed average debt across various indicators and visualized the results.</li>
+            <li>Outlined key questions to guide deeper analysis of international debt.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, Pandas, SQL, Jupyter Notebook</p>
+          <a href="https://github.com/stelladeecoder/analyzeInternationalDebtStatistics" target="_blank" class="repo-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project Card 5 -->
+      <article class="project-card">
+        <div class="card-header">
+          <h3>Investigating Netflix Movies</h3>
+          <button class="toggle" onclick="toggleDetails(event)">Show Details</button>
+        </div>
+        <p class="short-description">Analysis of Netflix’s movie catalog focusing on runtime and genre trends.</p>
+        <div class="details">
+          <ul>
+            <li>Merged Netflix data with color‑mapping tables to categorize films.</li>
+            <li>Filtered movies released after 2011 and visualized distributions of length, release year and rating.</li>
+            <li>Generated scatter plots and histograms to uncover relationships between runtime, genre and rating.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, Pandas, Matplotlib, Jupyter Notebook</p>
+          <a href="https://github.com/stelladeecoder/Investigating_Netflix_Movies" target="_blank" class="repo-link">View on GitHub</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="contact">
+      <h2>Get in Touch</h2>
+      <p>I’m based in <strong>St. Louis, Missouri</strong> and enjoy creating data‑driven solutions that balance accuracy with storytelling. Feel free to explore more of my repositories or contact me through my <a href="https://www.stelladeecoder.com/" target="_blank">website</a> or <a href="https://www.youtube.com/@StellaDeeCoder" target="_blank">YouTube channel</a>.</p>
+      <p>If you’re a recruiter, I’d love to discuss how my skills in data analysis and machine learning can help your team. Let’s connect!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Dee Carey. All rights reserved.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

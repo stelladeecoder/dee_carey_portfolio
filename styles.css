@@ -1,0 +1,167 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  color: #004f66;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+}
+
+header .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+header .tagline {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.summary p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.skills ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.skills li {
+  margin-bottom: 0.5rem;
+}
+
+.projects {
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-size: 1.3rem;
+  color: #004f66;
+}
+
+.card-header .toggle {
+  background-color: #006a8e;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-header .toggle:hover {
+  background-color: #004f66;
+}
+
+.short-description {
+  margin: 0.8rem 0;
+  color: #555;
+}
+
+.details {
+  display: none;
+  margin-top: 1rem;
+}
+
+.details ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.details li {
+  margin-bottom: 0.5rem;
+}
+
+.repo-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #006a8e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #004f66;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  header .intro {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .card-header h3 {
+    font-size: 1.1rem;
+  }
+}
