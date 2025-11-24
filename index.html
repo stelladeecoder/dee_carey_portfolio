@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dee Carey | Data Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Optional nice font -->
+  <!-- Soft, clean font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Top nav -->
   <header class="site-header">
-    <div class="nav-inner">
+    <div class="shell nav-shell">
       <div class="brand">
         <div class="brand-mark">DC</div>
         <div class="brand-text">
@@ -20,20 +21,23 @@
           <span class="brand-subtitle">Data professional</span>
         </div>
       </div>
+
       <nav class="nav-links">
+        <a href="#hero">Home</a>
         <a href="#skills">Skills</a>
+        <a href="#data">Data at a glance</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="top">
+  <main class="shell">
+    <!-- Hero section -->
+    <section id="hero" class="hero reveal-on-scroll">
       <div class="hero-text">
         <p class="eyebrow">Analytics and automation for smarter decisions</p>
-        <h1>Data projects that connect insight to action</h1>
+        <h1>Data projects that connect insight to action.</h1>
         <p class="hero-body">
           I use analytics and automation to support business and creative work.
           My focus is on clean data, clear communication, and results that
@@ -50,18 +54,19 @@
 
       <div class="hero-visual">
         <div class="hero-card">
+          <!-- use your existing image; if the name is different, update the src -->
           <img src="assets/header.png" alt="Abstract data and automation banner" />
         </div>
       </div>
     </section>
 
     <!-- Core skills -->
-    <section class="section" id="skills">
+    <section id="skills" class="section reveal-on-scroll">
       <h2>Core skills</h2>
       <div class="section-body">
         <ul class="skills-list">
           <li>
-            <strong>Data analysis and visualization:</strong>
+            <strong>Data analysis &amp; visualization:</strong>
             Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook
           </li>
           <li>
@@ -74,56 +79,116 @@
           </li>
           <li>
             <strong>Project workflow:</strong>
-            exploratory data analysis, model evaluation
-            (precision, recall, F1 score, ROC AUC), benchmarking
+            exploratory data analysis, model evaluation (precision, recall, F1 score, ROC AUC), benchmarking
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- Animated charts section -->
+    <section id="data" class="section charts-section reveal-on-scroll">
+      <h2>Data at a glance</h2>
+      <p class="section-intro">
+        A quick visual snapshot of where I focus my time and the kinds of domains I’ve worked in.
+      </p>
+
+      <div class="charts-grid">
+        <!-- Chart 1: skills focus -->
+        <div class="chart-card">
+          <h3>Focus by skill area</h3>
+          <p class="chart-caption">Based on recent learning, projects, and content.</p>
+          <div class="chart-bars">
+            <div class="chart-row">
+              <span class="chart-label">Analytics &amp; viz</span>
+              <div class="chart-track">
+                <div class="chart-bar" data-value="88"></div>
+              </div>
+              <span class="chart-value">88%</span>
+            </div>
+            <div class="chart-row">
+              <span class="chart-label">Machine learning</span>
+              <div class="chart-track">
+                <div class="chart-bar" data-value="75"></div>
+              </div>
+              <span class="chart-value">75%</span>
+            </div>
+            <div class="chart-row">
+              <span class="chart-label">Data engineering</span>
+              <div class="chart-track">
+                <div class="chart-bar" data-value="70"></div>
+              </div>
+              <span class="chart-value">70%</span>
+            </div>
+            <div class="chart-row">
+              <span class="chart-label">Storytelling</span>
+              <div class="chart-track">
+                <div class="chart-bar" data-value="90"></div>
+              </div>
+              <span class="chart-value">90%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart 2: domains -->
+        <div class="chart-card">
+          <h3>Project domains</h3>
+          <p class="chart-caption">Where my portfolio projects live today.</p>
+          <div class="chart-bubbles">
+            <div class="bubble-row">
+              <div class="bubble" data-size="32">
+                <span>Finance</span>
+              </div>
+              <div class="bubble" data-size="26">
+                <span>Charity</span>
+              </div>
+            </div>
+            <div class="bubble-row">
+              <div class="bubble" data-size="28">
+                <span>Sports</span>
+              </div>
+              <div class="bubble" data-size="24">
+                <span>Global dev</span>
+              </div>
+              <div class="bubble" data-size="22">
+                <span>Entertainment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects -->
-    <section class="section" id="projects">
+    <section id="projects" class="section reveal-on-scroll">
       <h2>Selected projects</h2>
       <p class="section-intro">
-        Click Show details on any card to see what I did, how I did it, and which tools I used.
+        Click <strong>Show details</strong> on any card to see what I did, how I did it, and which tools I used.
       </p>
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <article class="project-card">
+        <article class="project-card reveal-on-scroll">
           <header class="card-header">
             <div>
-              <h3>Credit Card Fraud Detection GBM</h3>
+              <h3>Credit card fraud detection (GBM)</h3>
               <p class="project-subtitle">Machine learning · Finance risk</p>
             </div>
-            <button class="toggle-details">Show details</button>
+            <button class="project-toggle" aria-expanded="false">Show details</button>
           </header>
 
           <p class="short-description">
             Detecting fraudulent credit card transactions using a Gradient Boosting model on an imbalanced dataset.
           </p>
 
-          <div class="details">
+          <div class="project-details">
             <ul>
-              <li>
-                Built a full data pipeline for the Kaggle Credit Card Fraud Detection dataset:
-                cleaned features, scaled inputs, and used a stratified split to keep class balance.
-              </li>
-              <li>
-                Trained a GradientBoostingClassifier and evaluated precision, recall,
-                F1 score, and ROC AUC.
-              </li>
-              <li>
-                Benchmarked against a Random Forest approach and achieved very strong performance,
-                with near perfect ROC AUC on the fraud class.
-              </li>
-              <li>
-                Summarized lessons learned and identified next steps like SMOTE and anomaly detection.
-              </li>
+              <li>Built a full pipeline for the Kaggle fraud dataset: cleaned features, scaled inputs, and used a stratified split to preserve class balance.</li>
+              <li>Trained a <code>GradientBoostingClassifier</code> and evaluated precision, recall, F1 score, and ROC AUC.</li>
+              <li>Benchmarked against a Random Forest baseline and achieved stronger performance on the fraud class.</li>
+              <li>Documented lessons learned and ideas for next steps like SMOTE and anomaly detection.</li>
             </ul>
             <p class="tech-line">
-              <strong>Stack:</strong>
-              Python, Pandas, NumPy, scikit learn, Matplotlib, Seaborn, Kaggle
+              <strong>Stack:</strong> Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Kaggle
             </p>
             <a class="card-link" href="https://github.com/stelladeecoder/credit-card-fraud-detection-gbm" target="_blank" rel="noopener">
               View repository
@@ -132,38 +197,28 @@
         </article>
 
         <!-- Project 2 -->
-        <article class="project-card">
+        <article class="project-card reveal-on-scroll">
           <header class="card-header">
             <div>
               <h3>CharityML finding donors</h3>
               <p class="project-subtitle">Supervised learning · Donation targeting</p>
             </div>
-            <button class="toggle-details">Show details</button>
+            <button class="project-toggle" aria-expanded="false">Show details</button>
           </header>
 
           <p class="short-description">
             Supervised learning project to identify likely donors for a charity while reducing mailing costs.
           </p>
 
-          <div class="details">
+          <div class="project-details">
             <ul>
-              <li>
-                Worked with a census style dataset containing demographic, occupation, and income variables.
-              </li>
-              <li>
-                Compared Naive Bayes, decision trees, logistic regression, and ensemble methods
-                to find the best model for donation response.
-              </li>
-              <li>
-                Used cross validation and evaluation metrics to balance coverage with cost.
-              </li>
-              <li>
-                Packaged work in a Jupyter notebook with a companion visualization script.
-              </li>
+              <li>Worked with a census-style dataset containing demographic, occupation, and income variables.</li>
+              <li>Compared Naive Bayes, decision trees, logistic regression, and ensemble methods to maximize donation response.</li>
+              <li>Used cross-validation and evaluation metrics to balance coverage with cost per mailing.</li>
+              <li>Included a Jupyter notebook with a companion visualization script for results.</li>
             </ul>
             <p class="tech-line">
-              <strong>Stack:</strong>
-              Python, NumPy, Pandas, Matplotlib, scikit learn
+              <strong>Stack:</strong> Python, NumPy, Pandas, Matplotlib, scikit-learn
             </p>
             <a class="card-link" href="https://github.com/stelladeecoder/CharityML" target="_blank" rel="noopener">
               View repository
@@ -172,34 +227,27 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card">
+        <article class="project-card reveal-on-scroll">
           <header class="card-header">
             <div>
-              <h3>Analyzing TV data Super Bowl</h3>
+              <h3>Analyzing TV data – Super Bowl</h3>
               <p class="project-subtitle">Sports analytics · Trend analysis</p>
             </div>
-            <button class="toggle-details">Show details</button>
+            <button class="project-toggle" aria-expanded="false">Show details</button>
           </header>
 
           <p class="short-description">
-            Exploratory analysis of Super Bowl outcomes, television ratings, and halftime music performances.
+            Exploratory analysis of Super Bowl outcomes, TV ratings, and halftime performances.
           </p>
 
-          <div class="details">
+          <div class="project-details">
             <ul>
-              <li>
-                Used game, TV, and halftime musician data curated from Wikipedia.
-              </li>
-              <li>
-                Explored extreme score lines, viewership patterns, and ad cost over time.
-              </li>
-              <li>
-                Identified the most frequent halftime performers and how shows align with game outcomes.
-              </li>
+              <li>Analyzed game, television, and halftime musician datasets curated from Wikipedia.</li>
+              <li>Explored extreme scorelines, viewership patterns, and ad costs over time.</li>
+              <li>Identified the most frequent halftime performers and how shows align with game dynamics.</li>
             </ul>
             <p class="tech-line">
-              <strong>Stack:</strong>
-              Python, NumPy, Pandas, Matplotlib
+              <strong>Stack:</strong> Python, NumPy, Pandas, Matplotlib
             </p>
             <a class="card-link" href="https://github.com/stelladeecoder/Analyzing-TV-Data" target="_blank" rel="noopener">
               View repository
@@ -208,34 +256,27 @@
         </article>
 
         <!-- Project 4 -->
-        <article class="project-card">
+        <article class="project-card reveal-on-scroll">
           <header class="card-header">
             <div>
               <h3>Analyze international debt statistics</h3>
               <p class="project-subtitle">Global development · Data exploration</p>
             </div>
-            <button class="toggle-details">Show details</button>
+            <button class="project-toggle" aria-expanded="false">Show details</button>
           </header>
 
           <p class="short-description">
             Notebook that explores World Bank data on debt owed by developing countries.
           </p>
 
-          <div class="details">
+          <div class="project-details">
             <ul>
-              <li>
-                Summarized debt by country and identified which country owes the most.
-              </li>
-              <li>
-                Calculated averages across debt indicators and explored their distribution.
-              </li>
-              <li>
-                Framed guiding questions about total debt, country comparison, and indicator patterns.
-              </li>
+              <li>Summarized total debt by country and identified which countries owe the most.</li>
+              <li>Calculated averages across debt indicators and inspected their distribution.</li>
+              <li>Outlined guiding questions about total debt, comparisons, and indicator patterns.</li>
             </ul>
             <p class="tech-line">
-              <strong>Stack:</strong>
-              Python, Pandas, SQL, Jupyter Notebook
+              <strong>Stack:</strong> Python, Pandas, SQL, Jupyter Notebook
             </p>
             <a class="card-link" href="https://github.com/stelladeecoder/analyzeInternationalDebtStatistics" target="_blank" rel="noopener">
               View repository
@@ -244,34 +285,27 @@
         </article>
 
         <!-- Project 5 -->
-        <article class="project-card">
+        <article class="project-card reveal-on-scroll">
           <header class="card-header">
             <div>
               <h3>Investigating Netflix movies</h3>
               <p class="project-subtitle">Entertainment data · Exploratory analysis</p>
             </div>
-            <button class="toggle-details">Show details</button>
+            <button class="project-toggle" aria-expanded="false">Show details</button>
           </header>
 
           <p class="short-description">
             Analysis of Netflix movie data focusing on runtime, release year, and genre trends.
           </p>
 
-          <div class="details">
+          <div class="project-details">
             <ul>
-              <li>
-                Worked with Netflix title data and a color mapping file to categorize entries.
-              </li>
-              <li>
-                Filtered for recent releases and visualized patterns in runtime and rating.
-              </li>
-              <li>
-                Built scatter plots and histograms to compare genres and lengths.
-              </li>
+              <li>Worked with Netflix title data and a color mapping file to categorize entries.</li>
+              <li>Filtered for more recent releases and visualized patterns in runtime and rating.</li>
+              <li>Built scatter plots and histograms to compare genres and lengths.</li>
             </ul>
             <p class="tech-line">
-              <strong>Stack:</strong>
-              Python, Pandas, Matplotlib, Jupyter Notebook
+              <strong>Stack:</strong> Python, Pandas, Matplotlib, Jupyter Notebook
             </p>
             <a class="card-link" href="https://github.com/stelladeecoder/Investigating_Netflix_Movies" target="_blank" rel="noopener">
               View repository
@@ -282,19 +316,30 @@
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
+    <section id="contact" class="section reveal-on-scroll">
       <h2>Get in touch</h2>
       <div class="section-body contact-body">
         <p>
-          I am based in St Louis, Missouri and I enjoy work that blends data, clear communication, and long term problem solving.
+          I am based in St Louis, Missouri and I enjoy work that blends data, clear communication,
+          and long-term problem solving.
         </p>
-        <p>
-          You can find more of my work and content here:
-        </p>
+        <p>You can find more of my work and content here:</p>
         <ul class="contact-links">
-          <li><a href="https://www.linkedin.com/in/deecarey/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/stelladeecoder" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.youtube.com/@StellaDeeCoder" target="_blank" rel="noopener">YouTube</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/deecarey/" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/stelladeecoder" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@StellaDeeCoder" target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </li>
         </ul>
       </div>
     </section>
