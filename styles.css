@@ -210,6 +210,12 @@ body {
   box-shadow: 0 16px 30px rgba(15, 97, 88, 0.06);
 }
 
+/* Add spacing between Focus card and Project domains card */
+.charts-grid .chart-card {
+  margin-bottom: 2rem;
+}
+
+
 .chart-row {
   display: grid;
   grid-template-columns: 130px minmax(0, 1fr) 46px;
