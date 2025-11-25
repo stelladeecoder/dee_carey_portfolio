@@ -201,6 +201,7 @@ body {
 .charts-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  gap: 1.8rem;          /* or try 2rem if you want more space */
 }
 
 .chart-card {
