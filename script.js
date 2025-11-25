@@ -54,14 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Project details toggle
-  document.querySelectorAll(".project-toggle").forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".project-card");
-      const details = card.querySelector(".project-details");
-      const isOpen = details.classList.toggle("open");
+    // Make entire project card clickable (except the button itself)
+  document.querySelectorAll(".project-card").forEach((card) => {
+    const link = card.querySelector(".card-link");
+    const href = link ? link.getAttribute("href") : card.dataset.link;
 
-      button.textContent = isOpen ? "Hide details" : "Show details";
-      button.setAttribute("aria-expanded", String(isOpen));
+    if (!href) return;
+
+    card.addEventListener("click", (event) => {
+      // Do not trigger when clicking the actual link (so right-click works)
+      if ((event.target instanceof HTMLElement) && event.target.closest(".card-link")) {
+        return;
+      }
+      window.open(href, "_blank");
     });
   });
 
