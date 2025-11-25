@@ -170,33 +170,50 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <article class="project-card reveal-on-scroll">
-          <header class="card-header">
-            <div>
-              <h3>Credit card fraud detection (GBM)</h3>
-              <p class="project-subtitle">Machine learning · Finance risk</p>
-            </div>
-            <button class="project-toggle" aria-expanded="false">Show details</button>
-          </header>
+  <header class="card-header">
+    <div>
+      <h3>Credit card fraud detection (GBM)</h3>
+      <p class="project-subtitle">Machine learning · Finance risk</p>
+      <p class="tech-line">
+        <strong>Stack:</strong> Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Kaggle
+      </p>
+    </div>
 
-          <p class="short-description">
-            Detecting fraudulent credit card transactions using a Gradient Boosting model on an imbalanced dataset.
-          </p>
+    <button class="project-toggle" aria-expanded="false">Show details</button>
+  </header>
 
-          <div class="project-details">
-            <ul>
-              <li>Built a full pipeline for the Kaggle fraud dataset: cleaned features, scaled inputs, and used a stratified split to preserve class balance.</li>
-              <li>Trained a <code>GradientBoostingClassifier</code> and evaluated precision, recall, F1 score, and ROC AUC.</li>
-              <li>Benchmarked against a Random Forest baseline and achieved stronger performance on the fraud class.</li>
-              <li>Documented lessons learned and ideas for next steps like SMOTE and anomaly detection.</li>
-            </ul>
-            <p class="tech-line">
-              <strong>Stack:</strong> Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Kaggle
-            </p>
-            <a class="card-link" href="https://github.com/stelladeecoder/credit-card-fraud-detection-gbm" target="_blank" rel="noopener">
-              View repository
-            </a>
-          </div>
-        </article>
+  <p class="short-description">
+    Identifying unusual spending behavior so fraud teams can focus on the transactions that matter most.
+  </p>
+
+  <div class="project-details">
+    <h4>Problem</h4>
+    <p>
+      Fraud analysts review large volumes of transactions, but only a fraction truly need closer attention.
+      Without support, teams lose time on routine cases while higher risk activity can slip through.
+    </p>
+
+    <h4>Approach</h4>
+    <p>
+      I explored cardholder spending patterns to understand what typical behavior looks like, then built
+      a data-driven scoring approach that highlights transactions that stand out from those baselines.
+      The goal was a clear, repeatable process that helps analysts decide where to look first.
+    </p>
+
+    <h4>Outcome</h4>
+    <p>
+      The result is a lightweight decision-support framework that reduces unnecessary manual review and
+      gives fraud teams a faster way to spot transactions that deserve deeper investigation.
+    </p>
+
+    <a class="card-link"
+       href="https://github.com/stelladeecoder/credit-card-fraud-detection-gbm"
+       target="_blank" rel="noopener">
+      View repository
+    </a>
+  </div>
+</article>
+
 
         <!-- Project 2 -->
         <article class="project-card reveal-on-scroll">
