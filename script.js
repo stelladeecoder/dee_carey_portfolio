@@ -56,16 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // TOGGLE PROJECT DETAILS
   document.querySelectorAll(".project-toggle").forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".project-card");
-      const details = card.querySelector(".project-details");
-      if (!details) return;
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();  // PREVENTS the GitHub link from firing
 
-      const isOpen = details.classList.toggle("open");
-      button.textContent = isOpen ? "Hide details" : "Show details";
-      button.setAttribute("aria-expanded", String(isOpen));
-    });
+    const card = button.closest(".project-card");
+    const details = card.querySelector(".project-details");
+    if (!details) return;
+
+    const isOpen = details.classList.toggle("open");
+    button.textContent = isOpen ? "Hide details" : "Show details";
+    button.setAttribute("aria-expanded", String(isOpen));
   });
+});
 
   // Footer year
   const yearSpan = document.getElementById("year");
