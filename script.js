@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // IntersectionObserver for reveal-on-scroll
+  // Reveal-on-scroll for sections/cards
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealObserver.observe(el);
   });
 
-  // IntersectionObserver for project cards and charts
+  // Animate skill bars when they come into view
   const barObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     barObserver.observe(bar);
   });
 
+  // Animate bubbles (project domains) when visible
   const bubbleObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -53,20 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
     bubbleObserver.observe(bubble);
   });
 
-  // Project details toggle
-    // Make entire project card clickable (except the button itself)
-  document.querySelectorAll(".project-card").forEach((card) => {
-    const link = card.querySelector(".card-link");
-    const href = link ? link.getAttribute("href") : card.dataset.link;
+  // TOGGLE PROJECT DETAILS
+  document.querySelectorAll(".project-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".project-card");
+      const details = card.querySelector(".project-details");
+      if (!details) return;
 
-    if (!href) return;
-
-    card.addEventListener("click", (event) => {
-      // Do not trigger when clicking the actual link (so right-click works)
-      if ((event.target instanceof HTMLElement) && event.target.closest(".card-link")) {
-        return;
-      }
-      window.open(href, "_blank");
+      const isOpen = details.classList.toggle("open");
+      button.textContent = isOpen ? "Hide details" : "Show details";
+      button.setAttribute("aria-expanded", String(isOpen));
     });
   });
 
